@@ -350,6 +350,8 @@ optionsMainMenu=(
     "Tableaux de bord" "tableaux_de_bord"
     "Fichier - Code" "fichier_code"
     "Divers" "divers"
+    "[Manuel d'utilisation]" "help"
+    "[Quitter]" "quit"
 )
 ############################################################################
 
