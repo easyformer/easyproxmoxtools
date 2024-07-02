@@ -17,14 +17,14 @@ Le script Easytools génère automatiquement :
 
 ## Capture de l'interface
 
-![easytools_capture](/easytools_capture.png "easytools_capture").
+![easyproxmoxtools_capture](/easyproxmoxtools_capture.png "easyproxmoxtools_capture").
 
 ## Pour l'utiliser sur votre Débian ou Ubuntu tappez simplement:
     
     cd /root
-    wget https://raw.githubusercontent.com/easyformer/easytools/main/easytools.sh
-    chmod +x easytools.sh
-    ./easytools.sh
+    wget https://raw.githubusercontent.com/easyformer/easyproxmoxtools/main/easyproxmoxtools.sh
+    chmod +x easyproxmoxtools.sh
+    ./easyproxmoxtools.sh
     
 
 ## Voici un exemple de fonction à intégrer dans le code pour ce faire:
