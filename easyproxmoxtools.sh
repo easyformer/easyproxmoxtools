@@ -3,11 +3,11 @@
 #    /___/`    # easyproxmoxtools.sh  
 #    (O,O)     # Utilité: ce script sert à configurer les serveurs
 #   /(   )\    # Usage: easytools.sh -option1 -option2 ... (Voir l'aide -h)
-# --==M=M==--  # Auteur: Johny BIGOUD <j.bigoud@flowerpower.org>
-#     Easy     # Mise à jour le: 00/00/0000
+# --==M=M==--  # Auteur: Alex FALZON
+#     Easy     # Mise à jour le: 15/07/2024
 # F O R M E R  ######################################
 
-nomduscript="Easy ProxMox Tools"
+nomduscript="Easy PMT"
 # http://www.octetmalin.net/linux/tutoriels/figlet.php
 # Exemple d'utilisation
 # figlet -ck `wget -qO- icanhazip.com`
@@ -97,6 +97,7 @@ printLogoAndNameScript(){
 	for i in "${!logoEasy[@]}"; do
 		echo -e "${logoEasy[$i]}" "${nomScripMultiligne[$i]}"
 	done
+	echo -e "                         Easy ProxMox Tools - By Easyformer"
 }
 
 # Fonction pour parser le script et extraire les informations
