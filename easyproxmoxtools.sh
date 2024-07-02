@@ -456,13 +456,12 @@ moniteur_proxmox_ve_all(){
 }
 
 installation_netdata_proxmox_ve(){
-#helpDescription="Netdata est un outil de surveillance des performances en temps réel open source conçu pour fournir des informations sur les performances et l'état des systèmes et des applications. Il est souvent utilisé par les administrateurs système, les professionnels DevOps et les développeurs pour surveiller et résoudre les problèmes sur les serveurs et autres appareils. Pour installer/désinstaller Netdata sur Proxmox VE, exécutez la commande ci-dessous dans le shell Proxmox VE."
+#helpDescription="Netdata est un outil de surveillance des performances en temps réel open source conçu pour fournir des informations sur les performances et l'état des systèmes et des applications. Il est souvent utilisé par les administrateurs système, les professionnels DevOps et les développeurs pour surveiller et résoudre les problèmes sur les serveurs et autres appareils. Pour installer/désinstaller Netdata sur Proxmox VE, exécutez la commande ci-dessous dans le shell Proxmox VE. Netdata Interface: IP:19999"
 #categoryMenu="outils_proxmox_ve"
 #nameMenu="Installation Netdata sur Proxmox VE"
 #commutatorLetter=""
 #commutatorWord="installation_netdata_proxmox_ve"
     bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/netdata.sh)"
-	# a revoir #####################################################################################################
 }
 
 post_installation_proxmox_ve(){
@@ -505,7 +504,7 @@ assistant_domestique_core_lxc(){
 
 machine_virtuelle_home_assistant_os(){
 #helpDescription="Possibilité de créer une machine virtuelle à l'aide d'une image stable, bêta ou de développement Ce script automatise le processus de création d'une machine virtuelle (VM) à l'aide de l'image disque officielle KVM (qcow2) fournie par l'équipe Home Assistant. Il consiste à rechercher, télécharger et extraire l'image, à définir les paramètres définis par l'utilisateur, à importer et à connecter le disque, à définir l'ordre de démarrage et à démarrer la VM. Il prend en charge différents types de stockage et n'implique aucune installation cachée. Le disque doit avoir une taille minimale de 32 Go et sa taille ne peut pas être modifiée lors de la création de la VM. Pour créer une nouvelle machine virtuelle Proxmox VE Home Assistant OS, exécutez la commande ci-dessous dans le shell Proxmox VE. Commande pour créer une nouvelle machine virtuelle Proxmox VE Home Assistant OS : bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/haos-vm.sh)""
-#categoryMenu="machine_virtuelle"
+#categoryMenu="assistant_a_domicile"
 #nameMenu="Machine virtuelle du système d'exploitation Home Assistant"
 #commutatorLetter=""
 #commutatorWord="machine_virtuelle_home_assistant_os"
@@ -514,7 +513,7 @@ machine_virtuelle_home_assistant_os(){
 
 machine_virtuelle_haos_pimox(){
 #helpDescription="Possibilité de créer une machine virtuelle à l'aide d'une image stable, bêta ou de développement Le script automatise le processus manuel de recherche, de téléchargement et d'extraction de l'image disque aarch64 (qcow2) fournie par l'équipe Home Assistant, la création d'une VM avec des paramètres définis par l'utilisateur, l'importation et la connexion du disque, la définition de l'ordre de démarrage et le démarrage de la VM. Pour créer une nouvelle VM PiMox HAOS, exécutez la commande ci-dessous dans le shell Proxmox VE. Commande pour créer une nouvelle VM PiMox HAOS : bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/pimox-haos-vm.sh)""
-#categoryMenu="machine_virtuelle"
+#categoryMenu="assistant_a_domicile"
 #nameMenu="Machine virtuelle HAOS PiMox"
 #commutatorLetter=""
 #commutatorWord="machine_virtuelle_haos_pimox"
@@ -523,7 +522,7 @@ machine_virtuelle_haos_pimox(){
 
 conteneur_podman_homeassistant_lxc(){
 #helpDescription="NE FONCTIONNE PAS SUR ZFS Une installation autonome de Home Assistant Core basée sur un conteneur Podman signifie que le logiciel Home Assistant Core est installé dans un conteneur géré par Podman, distinct du système d'exploitation hôte. Cela fournit une solution flexible et évolutive pour l'exécution du logiciel, car le conteneur peut être facilement déplacé entre les systèmes hôtes ou isolé des autres processus pour des raisons de sécurité. Podman est un outil open source populaire pour la gestion des conteneurs, similaire à Docker, mais conçu pour être utilisé sur les systèmes Linux sans démon. 🛈 Si le LXC est créé avec Privilège, le script configurera automatiquement le relais USB. Pour créer un nouveau conteneur Proxmox VE Podman Home Assistant LXC, exécutez la commande ci-dessous dans le shell Proxmox VE. Commande pour créer un nouveau conteneur Podman Home Assistant LXC : bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/podman-homeassistant.sh)""
-#categoryMenu="conteneur_podman"
+#categoryMenu="assistant_a_domicile"
 #nameMenu="Conteneur Podman Home Assistant LXC"
 #commutatorLetter=""
 #commutatorWord="conteneur_podman_homeassistant_lxc"
@@ -532,7 +531,7 @@ conteneur_podman_homeassistant_lxc(){
 
 esphome_lxc(){
 #helpDescription="ESPHome est une plateforme permettant de contrôler des appareils basés sur ESP8266/ESP32 à l'aide de fichiers de configuration et de les intégrer aux systèmes domotiques. Elle offre un moyen simple et flexible de configurer et de gérer les fonctionnalités de ces appareils, notamment la définition et l'automatisation des actions, la surveillance des capteurs et la connexion aux réseaux et autres services. ESPHome est conçu pour être convivial et facile à utiliser, et prend en charge une large gamme de fonctionnalités et d'intégrations, ce qui en fait un choix populaire pour les projets domotiques et les applications IoT. Pour créer un nouveau Proxmox VE ESPHome LXC, exécutez la commande ci-dessous dans le shell Proxmox VE. Commande pour créer un nouveau conteneur ESPHome LXC : bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/esphome.sh)""
-#categoryMenu="conteneur"
+#categoryMenu="automatisation"
 #nameMenu="ESPHome LXC"
 #commutatorLetter=""
 #commutatorWord="esphome_lxc"
@@ -541,7 +540,7 @@ esphome_lxc(){
 
 fhem_lxc(){
 #helpDescription="FHEM signifie « Freundliche Hausautomation und Energie-Messung », ce qui signifie « Automatisation domestique et mesure de l'énergie conviviales ». Le logiciel peut s'interfacer avec une large gamme d'appareils, notamment des systèmes d'éclairage, des thermostats, des stations météorologiques et des appareils multimédias, entre autres. Pour créer un nouveau Proxmox VE FHEM LXC, exécutez la commande ci-dessous dans le shell Proxmox VE. Commande pour créer un nouveau conteneur FHEM LXC : bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/fhem.sh)""
-#categoryMenu="conteneur"
+#categoryMenu="automatisation"
 #nameMenu="FHEM LXC"
 #commutatorLetter=""
 #commutatorWord="fhem_lxc"
@@ -550,7 +549,7 @@ fhem_lxc(){
 
 homebridge_lxc(){
 #helpDescription="Homebridge est une plate-forme logicielle open source populaire qui vous permet d'intégrer des appareils et des services de maison intelligente qui ne prennent pas en charge nativement le protocole HomeKit d'Apple dans l'écosystème HomeKit. Cela vous permet de contrôler et d'automatiser ces appareils à l'aide de Siri, de l'application Home ou d'autres applications compatibles HomeKit, ce qui facilite le regroupement d'une variété d'appareils différents dans un système de maison intelligente unifié. Avec Homebridge, vous pouvez étendre les capacités de votre maison intelligente, ouvrant ainsi de nouvelles possibilités d'automatisation et de contrôle de vos appareils et systèmes. Pour créer un nouveau Proxmox VE Homebridge LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/homebridge.sh)"" 
-#categoryMenu="conteneur"
+#categoryMenu="automatisation"
 #nameMenu="Pont Homebridge LXC"
 #commutatorLetter=""
 #commutatorWord="homebridge_lxc"
@@ -559,7 +558,7 @@ homebridge_lxc(){
 
 iobroker_lxc(){
 #helpDescription="ioBroker est une plateforme open source permettant de créer et de gérer des systèmes domotiques intelligents. Elle fournit une interface de contrôle et de gestion centralisée pour les appareils connectés, les capteurs et autres appareils IoT. ioBroker s'intègre à une large gamme de systèmes, d'appareils et de services de maison intelligente populaires, ce qui facilite l'automatisation des tâches et des processus, la surveillance et le contrôle des appareils, ainsi que la collecte et l'analyse de données provenant de diverses sources. Grâce à son architecture flexible et à son interface facile à utiliser, ioBroker est conçu pour permettre aux utilisateurs de créer et de personnaliser facilement leurs propres systèmes domotiques intelligents, quels que soient leur formation technique ou leur expérience. Pour créer un nouveau Proxmox VE ioBroker LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/iobroker.sh)\"" 
-#categoryMenu="conteneur"
+#categoryMenu="automatisation"
 #nameMenu="ioBroker LXC"
 #commutatorLetter=""
 #commutatorWord="iobroker_lxc"
@@ -568,7 +567,7 @@ iobroker_lxc(){
 
 n8n_lxc(){
 #helpDescription="n8n est un outil d'automatisation des flux de travail qui permet aux utilisateurs d'automatiser diverses tâches et processus en connectant diverses sources de données, systèmes et services. Il fournit une interface visuelle pour la création de flux de travail, permettant aux utilisateurs de définir et d'automatiser facilement des séquences d'actions complexes, telles que le traitement des données, la ramification conditionnelle et les appels d'API. n8n prend en charge une large gamme d'intégrations, ce qui en fait un outil polyvalent pour automatiser une variété de cas d'utilisation, des flux de travail de traitement de données simples aux processus commerciaux complexes. Grâce à son architecture extensible, n8n est conçu pour être facilement personnalisable et peut être adapté pour répondre aux besoins spécifiques de différents utilisateurs et secteurs d'activité. Pour créer un nouveau Proxmox VE n8n LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/n8n.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="automatisation"
 #nameMenu="n8n LXC"
 #commutatorLetter=""
 #commutatorWord="n8n_lxc"
@@ -577,7 +576,7 @@ n8n_lxc(){
 
 node_red_lxc(){
 #helpDescription="Node-RED est un outil de programmation visuelle qui permet aux développeurs et aux non-développeurs de connecter facilement des périphériques matériels, des API et des services en ligne pour créer des applications personnalisées. Il fournit une interface visuelle pour la création de flux de travail, ce qui facilite la création et la modification d'intégrations complexes sans avoir à écrire de code. Node-RED est utilisé dans une large gamme d'applications, des automatisations simples aux intégrations complexes, et est connu pour sa simplicité, sa polyvalence et sa facilité d'utilisation. Pour créer un nouveau Proxmox VE Node-RED LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/node-red.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="automatisation"
 #nameMenu="Node-RED LXC"
 #commutatorLetter=""
 #commutatorWord="node_red_lxc"
@@ -586,7 +585,7 @@ node_red_lxc(){
 
 openhab_lxc(){
 #helpDescription="openHAB est une plate-forme domotique open source populaire qui fournit une solution indépendante des fournisseurs et des technologies pour l'intégration et l'automatisation de divers appareils et services de maison intelligente. Elle prend en charge une large gamme d'appareils et de protocoles, ce qui facilite le regroupement de différents systèmes et appareils dans un écosystème de maison intelligente unifié. Grâce à son interface conviviale et à ses puissantes capacités d'automatisation, openHAB facilite la création d'automatisations personnalisées et la surveillance et le contrôle de vos appareils et systèmes de maison intelligente, le tout à partir d'une seule interface. Pour créer un nouveau Proxmox VE openHAB LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/openhab.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="automatisation"
 #nameMenu="OpenHAB LXC"
 #commutatorLetter=""
 #commutatorWord="openhab_lxc"
@@ -595,7 +594,7 @@ openhab_lxc(){
 
 emqx_lxc(){
 #helpDescription="EMQX est un broker MQTT open source doté d'un moteur de traitement de messages en temps réel hautes performances. Il est conçu pour gérer les déploiements IoT à grande échelle, offrant une livraison de messages rapide et fiable pour les appareils connectés. EMQX est connu pour son évolutivité, sa fiabilité et sa faible latence, ce qui en fait un choix populaire pour les applications IoT et M2M. Il offre également une large gamme de fonctionnalités et de plugins pour une sécurité, une surveillance et une gestion améliorées. Pour créer un nouveau Proxmox VE EMQX LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/emqx.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="mqtt"
 #nameMenu="EMQX LXC"
 #commutatorLetter=""
 #commutatorWord="emqx_lxc"
@@ -604,7 +603,7 @@ emqx_lxc(){
 
 hivemq_ce_lxc(){
 #helpDescription="HiveMQ CE est un courtier MQTT open source basé sur Java qui prend entièrement en charge MQTT 3.x et MQTT 5. Pour créer un nouveau Proxmox VE HiveMQ CE LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/hivemq.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="mqtt"
 #nameMenu="HiveMQ CE LXC"
 #commutatorLetter=""
 #commutatorWord="hivemq_ce_lxc"
@@ -613,7 +612,7 @@ hivemq_ce_lxc(){
 
 mqtt_lxc(){
 #helpDescription="Eclipse Mosquitto est un courtier de messages open source qui implémente le protocole MQTT (Message Queuing Telemetry Transport). Il s'agit d'un courtier de messages léger et simple à utiliser qui permet aux appareils et applications IoT de communiquer entre eux en échangeant des messages en temps réel. Mosquitto est largement utilisé dans les applications IoT, en raison de ses faibles besoins en ressources et de sa compatibilité avec une large gamme d'appareils et de plates-formes. Pour créer un nouveau Proxmox VE MQTT LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/mqtt.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="mqtt"
 #nameMenu="MQTT LXC"
 #commutatorLetter=""
 #commutatorWord="mqtt_lxc"
@@ -622,7 +621,7 @@ mqtt_lxc(){
 
 lapinmq_lxc(){
 #helpDescription="RabbitMQ est un courtier de messagerie et de streaming fiable et mature, facile à déployer dans des environnements cloud, sur site et sur votre machine locale. Pour créer un nouveau RabbitMQ LXC Proxmox VE, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/rabbitmq.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="mqtt"
 #nameMenu="LapinMQ LXC"
 #commutatorLetter=""
 #commutatorWord="lapinmq_lxc"
@@ -631,7 +630,7 @@ lapinmq_lxc(){
 
 apache_cassandra_lxc(){
 #helpDescription="Apache Cassandra est une base de données distribuée NoSQL open source à laquelle des milliers d'entreprises font confiance pour son évolutivité et sa haute disponibilité sans compromettre les performances. Pour créer un nouveau Proxmox VE Apache Cassandra LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/apache-cassandra.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="Apache Cassandra LXC"
 #commutatorLetter=""
 #commutatorWord="apache_cassandra_lxc"
@@ -640,7 +639,7 @@ apache_cassandra_lxc(){
 
 apache_couchdb_lxc(){
 #helpDescription="Apache CouchDB est une base de données NoSQL avec une synchronisation multi-maître transparente, adaptée du Big Data au mobile, avec une API HTTP/JSON intuitive et conçue pour la fiabilité. Pour créer un nouveau Proxmox VE Apache CouchDB LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/apache-couchdb.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="Apache CouchDB LXC"
 #commutatorLetter=""
 #commutatorWord="apache_couchdb_lxc"
@@ -649,7 +648,7 @@ apache_couchdb_lxc(){
 
 influxdb_lxc(){
 #helpDescription="InfluxDB est une base de données optimisée pour les données horodatées, comme les métriques IoT et industrielles. Vous pouvez choisir d'installer InfluxDB v1 avec Chronograf ou InfluxDB v2 avec Telegraf. Telegraf collecte et envoie des données de métriques et d'événements vers diverses sorties. Pour créer un nouveau Proxmox VE InfluxDB LXC, exécutez la commande ci-dessous dans le shell Proxmox VE : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/influxdb.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="InfluxDB LXC"
 #commutatorLetter=""
 #commutatorWord="influxdb_lxc"
@@ -658,7 +657,7 @@ influxdb_lxc(){
 
 mariadb_lxc(){
 #helpDescription="MariaDB est une version dérivée de MySQL, offrant des fonctionnalités de niveau entreprise et un support commercial. Pour créer un nouveau Proxmox VE MariaDB LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/mariadb.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="MariaDB LXC"
 #commutatorLetter=""
 #commutatorWord="mariadb_lxc"
@@ -667,7 +666,7 @@ mariadb_lxc(){
 
 mongodb_lxc(){
 #helpDescription="MongoDB est une base de données NoSQL avec un modèle de données orienté document, idéal pour gérer de gros volumes de données. Pour créer un nouveau Proxmox VE MongoDB LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/mongodb.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="MongoDB LXC"
 #commutatorLetter=""
 #commutatorWord="mongodb_lxc"
@@ -676,7 +675,7 @@ mongodb_lxc(){
 
 pocketbase_lxc(){
 #helpDescription="Pocketbase est un backend open source avec une base de données SQLite intégrée, des abonnements en temps réel, une gestion d'authentification intégrée, une interface utilisateur de tableau de bord et une API REST. Pour créer un nouveau Proxmox VE Pocketbase LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/pocketbase.sh)\""
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="Pocketbase LXC"
 #commutatorLetter=""
 #commutatorWord="pocketbase_lxc"
@@ -685,7 +684,7 @@ pocketbase_lxc(){
 
 postgresql_lxc(){
 #helpDescription="PostgreSQL est un système de gestion de base de données relationnelle open source connu pour son extensibilité et son strict respect des normes SQL. Pour créer un nouveau Proxmox VE PostgreSQL LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/postgresql.sh)\". Paramètres par défaut : 1 Go de RAM - 4 Go de stockage - 1 vCPU. Adminer est un outil de gestion de base de données complet. Interface administrateur : IP/adminer/. Post-installation."
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="PostgreSQL LXC"
 #commutatorLetter=""
 #commutatorWord="postgresql_lxc"
@@ -694,7 +693,7 @@ postgresql_lxc(){
 
 redis_lxc(){
 #helpDescription="Redis est un magasin de données open source en mémoire utilisé comme cache, base de données vectorielle, base de données de documents, moteur de streaming et courtier de messages. Pour créer un nouveau Proxmox VE Redis LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/redis.sh)\". Paramètres par défaut : 1 Go de RAM - 4 Go de stockage - 1 vCPU. Configuration de Redis : nano /etc/redis/redis.conf"
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="Redis LXC"
 #commutatorLetter=""
 #commutatorWord="redis_lxc"
@@ -703,7 +702,7 @@ redis_lxc(){
 
 deconz_lxc(){
 #helpDescription="deCONZ est un logiciel de gestion et de contrôle des appareils domestiques intelligents basés sur Zigbee. Il permet de paramétrer, de configurer et de visualiser l'état des appareils connectés, ainsi que de déclencher des actions et des automatisations. Il fonctionne comme un pont entre le réseau Zigbee et d'autres systèmes domotiques et peut être utilisé comme solution autonome ou intégré dans des configurations existantes. Pour créer un nouveau Proxmox VE deCONZ LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/deconz.sh)\". Paramètres par défaut : 1 Go de RAM - 4 Go de stockage - 2 vCPU - Privilégié. Interface deCONZ : IP:80"
-#categoryMenu="conteneur"
+#categoryMenu="base_de_donnees"
 #nameMenu="deCONZ LXC"
 #commutatorLetter=""
 #commutatorWord="deconz_lxc"
@@ -712,7 +711,7 @@ deconz_lxc(){
 
 matterbridge_lxc(){
 #helpDescription="Matterbridge vous permet de rendre tous vos appareils Matter opérationnels en quelques minutes sans avoir à vous soucier du processus de couplage de chaque appareil. Pour créer un nouveau Proxmox VE Matterbridge LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/matterbridge.sh)\". Paramètres par défaut : 1 Go de RAM - 4 Go de stockage - 1 vCPU. Interface Matterbridge : IP:8283"
-#categoryMenu="conteneur"
+#categoryMenu="zigbee_zwave_matiere"
 #nameMenu="Matterbridge LXC"
 #commutatorLetter=""
 #commutatorWord="matterbridge_lxc"
@@ -721,7 +720,7 @@ matterbridge_lxc(){
 
 zwave_js_ui_lxc(){
 #helpDescription="Z-Wave JS UI est un logiciel open source qui sert de passerelle entre les appareils Z-Wave et le protocole MQTT (Message Queuing Telemetry Transport), permettant aux utilisateurs de contrôler et de surveiller leurs appareils Z-Wave via une interface utilisateur. Pour créer une nouvelle interface utilisateur Z-Wave JS LXC Proxmox VE, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/zwave-js-ui.sh)\". Paramètres par défaut : 1 Go de RAM - 4 Go de stockage - 2 vCPU - Privilégié. Interface utilisateur Z-Wave JS : IP : 8091"
-#categoryMenu="conteneur"
+#categoryMenu="zigbee_zwave_matiere"
 #nameMenu="Interface utilisateur Z-Wave JS LXC"
 #commutatorLetter=""
 #commutatorWord="zwave_js_ui_lxc"
@@ -730,7 +729,7 @@ zwave_js_ui_lxc(){
 
 zigbee2mqtt_lxc(){
 #helpDescription="Zigbee2MQTT est un projet logiciel open source qui vous permet d'utiliser des appareils domestiques intelligents basés sur Zigbee (tels que ceux vendus sous les marques Philips Hue et Ikea Tradfri) avec des systèmes domotiques basés sur MQTT, comme Home Assistant, Node-RED et d'autres. Pour créer un nouveau Proxmox VE Zigbee2MQTT LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/zigbee2mqtt.sh)\". Paramètres par défaut : 1 Go de RAM - 4 Go de stockage - 2 vCPU - Privilégié. En guise d'alternative, vous pouvez utiliser Alpine Linux et le package Zigbee2MQTT pour créer un conteneur Zigbee2MQTT LXC avec un temps de création plus rapide et une utilisation minimale des ressources système. Pour créer un nouveau Proxmox VE Alpine-Zigbee2MQTT LXC, exécutez la commande : bash -c \"$(wget -qO - https://github.com/tteck/Proxmox/raw/main/ct/alpine-zigbee2mqtt.sh)\". Paramètres par défaut : 256 Mo de RAM - 300 Mo de stockage - 1 vCPU - Privilégié. Post-installation"
-#categoryMenu="conteneur"
+#categoryMenu="zigbee_zwave_matiere"
 #nameMenu="Zigbee2MQTT LXC"
 #commutatorLetter=""
 #commutatorWord="zigbee2mqtt_lxc"
@@ -739,7 +738,7 @@ zigbee2mqtt_lxc(){
 
 alpine_zigbee2mqtt_lxc(){
 #helpDescription="En guise d'alternative, vous pouvez utiliser Alpine Linux et le package Zigbee2MQTT pour créer un conteneur Zigbee2MQTT LXC avec un temps de création plus rapide et une utilisation minimale des ressources système. Pour créer un nouveau Proxmox VE Alpine-Zigbee2MQTT LXC, exécutez la commande : bash -c \"$(wget -qO - https://github.com/tteck/Proxmox/raw/main/ct/alpine-zigbee2mqtt.sh)\". Paramètres par défaut : 256 Mo de RAM - 300 Mo de stockage - 1 vCPU - Privilégié. Post-installation"
-#categoryMenu="conteneur"
+#categoryMenu="zigbee_zwave_matiere"
 #nameMenu="Alpine-Zigbee2MQTT LXC"
 #commutatorLetter=""
 #commutatorWord="alpine_zigbee2mqtt_lxc"
@@ -748,7 +747,7 @@ alpine_zigbee2mqtt_lxc(){
 
 changedetection_lxc(){
 #helpDescription="Change Detection est un service qui vous permet de surveiller les modifications apportées aux pages Web et de recevoir des notifications lorsque des modifications se produisent. Pour créer un nouveau LXC de détection des modifications Proxmox VE, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/changedetection.sh)\". Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU. Pour mettre à jour la détection des modifications, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/changedetection.sh)\" (ou saisissez update) dans la console LXC. Interface de détection de changement : IP:5000"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Change Detection LXC"
 #commutatorLetter=""
 #commutatorWord="changedetection_lxc"
@@ -757,7 +756,7 @@ changedetection_lxc(){
 
 glances_lxc(){
 #helpDescription="Glances est un outil de surveillance multiplateforme open source. Il permet de surveiller en temps réel divers aspects de votre système tels que le processeur, la mémoire, le disque, l'utilisation du réseau, etc. Pour installer Glances, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/glances.sh)\". Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU. Interface Glances : IP:61208"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Glances LXC"
 #commutatorLetter=""
 #commutatorWord="glances_lxc"
@@ -767,7 +766,7 @@ glances_lxc(){
 
 grafana_lxc(){
 #helpDescription="Grafana est une plateforme de visualisation et de surveillance des données qui permet aux utilisateurs d'interroger, de visualiser, d'alerter et de comprendre les métriques, les journaux et d'autres sources de données. Pour créer un nouveau Proxmox VE Grafana LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/grafana.sh)\". Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU. En guise d'alternative, vous pouvez utiliser Alpine Linux et le package Grafana pour créer un conteneur Grafana LXC avec un temps de création plus rapide et une utilisation minimale des ressources système. Pour créer un nouveau Proxmox VE Alpine-Grafana LXC, exécutez la commande : bash -c \"$(wget -qO - https://github.com/tteck/Proxmox/raw/main/ct/alpine-grafana.sh)\". Paramètres par défaut : 256 Mio de RAM - 500 Mio de stockage - 1 vCPU. Interface Grafana : IP:3000. Connexion initiale : nom d'utilisateur admin, mot de passe admin"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Grafana LXC"
 #commutatorLetter=""
 #commutatorWord="grafana_lxc"
@@ -776,7 +775,7 @@ grafana_lxc(){
 
 myspeed_lxc(){
 #helpDescription="MySpeed est un logiciel d'analyse de test de vitesse qui enregistre votre vitesse Internet jusqu'à 30 jours. Pour créer un nouveau Proxmox VE MySpeed LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/myspeed.sh)\". Paramètres par défaut : 1 Go de RAM - 4 Go de stockage - 1 vCPU. Pour mettre à jour MySpeed, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/myspeed.sh)\" (ou saisissez update) dans la console LXC. Interface MySpeed : IP : 5216"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="MySpeed LXC"
 #commutatorLetter=""
 #commutatorWord="myspeed_lxc"
@@ -785,7 +784,7 @@ myspeed_lxc(){
 
 notifiarr_lxc(){
 #helpDescription="Notifiarr est un système spécialement conçu pour rassembler de nombreuses applications afin de gérer et de personnaliser les notifications via Discord. Pour créer un nouveau Proxmox VE Notifiarr LXC, exécutez la commande : bash -c \"$(wget -qO - https://github.com/tteck/Proxmox/raw/main/ct/notifiarr.sh)\". Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU. Modifiez manuellement /etc/notifiarr/notifiarr.confpour saisir la clé API de Notifiarr.com et créez un mot de passe pour l'interface utilisateur. Interface de notification : IP : 5454"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Notifiarr LXC"
 #commutatorLetter=""
 #commutatorWord="notifiarr_lxc"
@@ -794,7 +793,7 @@ notifiarr_lxc(){
 
 openobserve_lxc(){
 #helpDescription="OpenObserve est une solution simple mais sophistiquée de recherche de journaux, de surveillance d'infrastructure et d'APM. Pour créer un nouveau Proxmox VE OpenObserve LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/openobserve.sh)\". Paramètres par défaut : 512 Mo de RAM - 3 Go de stockage - 1 vCPU. Pour mettre à jour OpenObserve, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/openobserve.sh)\" (ou saisissez update) dans la console LXC. Interface OpenObserve : IP:5080"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="OpenObserve LXC"
 #commutatorLetter=""
 #commutatorWord="openobserve_lxc"
@@ -803,7 +802,7 @@ openobserve_lxc(){
 
 peanut_lxc(){
 #helpDescription="PeaNUT est un petit tableau de bord pour les outils UPS réseau. Pour créer un nouveau Proxmox VE PeaNUT LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/peanut.sh)\". Paramètres par défaut : 1 Go de RAM - 4 Go de stockage - 1 vCPU. Pour mettre à jour PeaNUT, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/peanut.sh)\" (ou saisissez update) dans la console LXC. Interface PeaNUT : IP:3000"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="PeaNUT LXC"
 #commutatorLetter=""
 #commutatorWord="peanut_lxc"
@@ -812,7 +811,7 @@ peanut_lxc(){
 
 pialert_lxc(){
 #helpDescription="Pi.Alert est un détecteur d'intrusion WIFI/LAN. Il vérifie les appareils connectés et vous alerte en cas d'appareils inconnus. Il prévient également de la déconnexion des appareils \"toujours connectés\". Pour créer un nouveau Proxmox VE Pi.Alert LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/pialert.sh)\". Paramètres par défaut : 512 Mo de RAM - 3 Go de stockage - 1 vCPU. Pour mettre à jour Pi.Alert, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/pialert.sh)\" (ou saisissez update) dans la console LXC. Interface Pi.Alert : IP/pialert/"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Pi.Alert LXC"
 #commutatorLetter=""
 #commutatorWord="pialert_lxc"
@@ -821,7 +820,7 @@ pialert_lxc(){
 
 prometheus_lxc(){
 #helpDescription="Prometheus est largement utilisé pour surveiller les performances et l'état de santé de divers composants et applications d'infrastructure, et déclencher des alertes en fonction de règles prédéfinies. Il dispose d'un modèle de données multidimensionnel et prend en charge diverses sources et exportateurs de données, ce qui en fait une solution de surveillance extrêmement flexible et évolutive. Pour créer un nouveau Proxmox VE Prometheus LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/prometheus.sh)\". Paramètres par défaut : 2 Go de RAM - 4 Go de stockage - 1 vCPU. Interface Prometheus : IP:9090"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Prometheus LXC"
 #commutatorLetter=""
 #commutatorWord="prometheus_lxc"
@@ -830,7 +829,7 @@ prometheus_lxc(){
 
 smokeping_lxc(){
 #helpDescription="SmokePing est un outil de mesure de latence de luxe. Il peut mesurer, stocker et afficher la latence, la distribution de la latence et la perte de paquets. Pour créer un nouveau Proxmox VE SmokePing LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/smokeping.sh)\". Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU. Interface de SmokePing : IP/smokeping"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="SmokePing LXC"
 #commutatorLetter=""
 #commutatorWord="smokeping_lxc"
@@ -839,7 +838,7 @@ smokeping_lxc(){
 
 umami_lxc(){
 #helpDescription="Umami facilite la collecte, l'analyse et la compréhension de vos données Web, tout en préservant la confidentialité des visiteurs et la propriété des données. Pour créer un nouveau Proxmox VE Umami LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/umami.sh)\". Paramètres par défaut : 1 Go de RAM - 12 Go de stockage - 1 vCPU. Pour mettre à jour Umami, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/umami.sh)\" (ou saisissez update) dans la console LXC. Interface Umami : IP:3000"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Umami LXC"
 #commutatorLetter=""
 #commutatorWord="umami_lxc"
@@ -848,7 +847,7 @@ umami_lxc(){
 
 uptimekuma_lxc(){
 #helpDescription="Uptime Kuma est un système de surveillance et d'alerte qui surveille la disponibilité et les performances des serveurs, des sites Web et d'autres appareils connectés à Internet. Pour créer un nouveau Proxmox VE Uptime Kuma LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/uptimekuma.sh)\". Paramètres par défaut : 1 Go de RAM - 2 Go de stockage - 1 vCPU. Pour mettre à jour Uptime Kuma, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/uptimekuma.sh)\" (ou saisissez update) dans la console LXC. Interface Kuma de disponibilité : IP:3001"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Uptime Kuma LXC"
 #commutatorLetter=""
 #commutatorWord="uptimekuma_lxc"
@@ -857,7 +856,7 @@ uptimekuma_lxc(){
 
 watchyourlan_lxc(){
 #helpDescription="WatchYourLAN est un scanner IP réseau léger avec interface graphique Web. Pour créer un nouveau Proxmox VE WatchYourLAN LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/watchyourlan.sh)\". Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU. Pour mettre à jour WatchYourLAN, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/watchyourlan.sh)\" (ou saisissez update) dans la console LXC. Interface WatchYourLAN : IP:8840"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="WatchYourLAN LXC"
 #commutatorLetter=""
 #commutatorWord="watchyourlan_lxc"
@@ -866,7 +865,7 @@ watchyourlan_lxc(){
 
 zabbix_lxc(){
 #helpDescription="Zabbix est une solution de surveillance tout-en-un avec une variété de fonctionnalités de qualité professionnelle disponibles dès la sortie de la boîte. Pour créer un nouveau Proxmox VE Zabbix LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/zabbix.sh)\". Paramètres par défaut : 4 Go de RAM - 6 Go de stockage - 2 vCPU. Informations d'identification : Mot de passe admin: zabbix. Informations d'identification de la base de données : cat zabbix.creds. Interface Zabbix : IP:5454"
-#categoryMenu="conteneur"
+#categoryMenu="suivi_analyse"
 #nameMenu="Zabbix LXC"
 #commutatorLetter=""
 #commutatorWord="zabbix_lxc"
@@ -875,7 +874,7 @@ zabbix_lxc(){
 
 casaos_lxc(){
 #helpDescription="CasaOS est un logiciel qui vise à faciliter la création d'un système cloud personnel à domicile. Pour créer un nouveau Proxmox VE CasaOS LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/casaos.sh)\". Paramètres par défaut : 2 Go de RAM - 8 Go de stockage - 2 vCPU. Interface CasaOS : IP"
-#categoryMenu="conteneur"
+#categoryMenu="docker_kubernetes"
 #nameMenu="CasaOS LXC"
 #commutatorLetter=""
 #commutatorWord="casaos_lxc"
@@ -884,7 +883,7 @@ casaos_lxc(){
 
 docker_lxc(){
 #helpDescription="Docker est un projet open source permettant d'automatiser le déploiement d'applications sous forme de conteneurs portables et autonomes. Pour créer un nouveau Proxmox VE Docker LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/docker.sh)\". Paramètres par défaut : 2 Go de RAM - 4 Go de stockage - 2 vCPU. En guise d’alternative, vous pouvez utiliser Alpine Linux et le package Docker pour créer un conteneur Docker LXC avec un temps de création plus rapide et une utilisation minimale des ressources système. Pour créer un nouveau Proxmox VE Alpine-Docker LXC, exécutez la commande : bash -c \"$(wget -qO - https://github.com/tteck/Proxmox/raw/main/ct/alpine-docker.sh)\". Interface Portainer : (https) IP : 9443"
-#categoryMenu="conteneur"
+#categoryMenu="docker_kubernetes"
 #nameMenu="Docker LXC"
 #commutatorLetter=""
 #commutatorWord="docker_lxc"
@@ -893,7 +892,7 @@ docker_lxc(){
 
 dockge_lxc(){
 #helpDescription="Dockge est un gestionnaire orienté pile Docker compose.yaml auto-hébergé, sophistiqué, facile à utiliser et réactif. Pour créer un nouveau Proxmox VE Dockge LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/dockge.sh)\". Paramètres par défaut : 2 Go de RAM - 18 Go de stockage - 2 vCPU. Interface de la station d'accueil : IP:5001. Pour mettre à jour Dockge : cd /opt/dockge && docker compose pull && docker compose up -d"
-#categoryMenu="conteneur"
+#categoryMenu="docker_kubernetes"
 #nameMenu="Dockge LXC"
 #commutatorLetter=""
 #commutatorWord="dockge_lxc"
@@ -902,7 +901,7 @@ dockge_lxc(){
 
 podman_lxc(){
 #helpDescription="Podman est un moteur de conteneur open source, sans démon et portable qui permet aux utilisateurs de gérer des conteneurs sur des systèmes Linux sans qu'un démon ou un service système ne soit exécuté en arrière-plan. Pour créer un nouveau Proxmox VE Podman LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/podman.sh)\". Paramètres par défaut : 2 Go de RAM - 4 Go de stockage - 2 vCPU"
-#categoryMenu="conteneur"
+#categoryMenu="docker_kubernetes"
 #nameMenu="Podman LXC"
 #commutatorLetter=""
 #commutatorWord="podman_lxc"
@@ -911,7 +910,7 @@ podman_lxc(){
 
 runtipi_lxc(){
 #helpDescription="Runtipi vous permet d'installer toutes vos applications auto-hébergées préférées sans avoir à configurer et à gérer chaque service. Pour créer un nouveau Runtipi LXC Proxmox VE, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/runtipi.sh)\". Paramètres par défaut : 2 Go de RAM - 8 Go de stockage - 2 vCPU. Interface Runtipi : IP"
-#categoryMenu="conteneur"
+#categoryMenu="docker_kubernetes"
 #nameMenu="Runtipi LXC"
 #commutatorLetter=""
 #commutatorWord="runtipi_lxc"
@@ -920,7 +919,7 @@ runtipi_lxc(){
 
 alpine_lxc(){
 #helpDescription="Une distribution Linux légère et orientée sécurité basée sur musl et BusyBox. Pour créer un nouveau Proxmox VE Alpine LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/alpine.sh)\". Paramètres par défaut : 512 Mo de RAM - 100 Mo de stockage - 1 vCPU. Mot de passe par défaut : alpine. Pour mettre à jour Alpine : apk update && apk upgrade"
-#categoryMenu="conteneur"
+#categoryMenu="systeme_operateur"
 #nameMenu="Alpine LXC"
 #commutatorLetter=""
 #commutatorWord="alpine_lxc"
@@ -929,7 +928,7 @@ alpine_lxc(){
 
 debian_vm(){
 #helpDescription="Debian Linux est une distribution qui privilégie les logiciels libres. Pour créer une nouvelle machine virtuelle Debian 12 Proxmox VE, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/debian-vm.sh)\". Paramètres par défaut : 2 Go de RAM - 2 Go de stockage - 2 vCPU. Plus d'infos sur https://github.com/tteck/Proxmox/discussions/1988"
-#categoryMenu="machine virtuelle"
+#categoryMenu="systeme_operateur"
 #nameMenu="Debian 12 VM"
 #commutatorLetter=""
 #commutatorWord="debian_vm"
@@ -938,7 +937,7 @@ debian_vm(){
 
 debian_lxc(){
 #helpDescription="Debian Linux est une distribution qui privilégie les logiciels libres. Pour créer un nouveau Proxmox VE Debian LXC, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/debian.sh)\". Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU"
-#categoryMenu="conteneur"
+#categoryMenu="systeme_operateur"
 #nameMenu="Debian LXC"
 #commutatorLetter=""
 #commutatorWord="debian_lxc"
@@ -947,7 +946,7 @@ debian_lxc(){
 
 ubuntu2204_vm(){
 #helpDescription="Ubuntu est une distribution basée sur Debian. Pour créer une nouvelle VM Proxmox VE Ubuntu 22.04, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2204-vm.sh)\". Paramètres par défaut : 2 Go de RAM - 2 Go de stockage - 2 vCPU. Plus d'infos sur https://github.com/tteck/Proxmox/discussions/2072"
-#categoryMenu="machine virtuelle"
+#categoryMenu="systeme_operateur"
 #nameMenu="Ubuntu 22.04 VM"
 #commutatorLetter=""
 #commutatorWord="ubuntu2204_vm"
@@ -956,7 +955,7 @@ ubuntu2204_vm(){
 
 ubuntu2404_vm(){
 #helpDescription="Ubuntu est une distribution basée sur Debian. Pour créer une nouvelle VM Proxmox VE Ubuntu 24.04, exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/vm/ubuntu2404-vm.sh)\". Paramètres par défaut : 2 Go de RAM - 2 Go de stockage - 2 vCPU. Plus d'infos sur https://github.com/tteck/Proxmox/discussions/2072"
-#categoryMenu="machine virtuelle"
+#categoryMenu="systeme_operateur"
 #nameMenu="Ubuntu 24.04 VM"
 #commutatorLetter=""
 #commutatorWord="ubuntu2404_vm"
@@ -966,7 +965,7 @@ ubuntu2404_vm(){
 
 ubuntu_lxc(){
 #helpDescription="Ubuntu est une distribution basée sur Debian, conçue pour avoir des versions régulières et une expérience utilisateur cohérente. Pour créer un nouveau Proxmox VE Ubuntu LXC (version 22.04 par défaut), exécutez la commande : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/ubuntu.sh)\". Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU - 22.04"
-#categoryMenu="conteneur"
+#categoryMenu="systeme_operateur"
 #nameMenu="Ubuntu LXC"
 #commutatorLetter=""
 #commutatorWord="ubuntu_lxc"
@@ -975,7 +974,7 @@ ubuntu_lxc(){
 
 all_templates_lxc() {
 #helpDescription="Script pour créer un modèle LXC sur Proxmox VE. Pour créer un modèle, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/all-templates.sh)\". Paramètres par défaut : 2 Go de RAM - 8 Go de stockage - 2 vCPU - onboot 0 - DHCP - Sans privilège."
-#categoryMenu="LXC"
+#categoryMenu="cle_en_main"
 #nameMenu="Modèles LXC"
 #commutatorLetter=""
 #commutatorWord="all_templates_lxc"
@@ -984,7 +983,7 @@ all_templates_lxc() {
 
 turnkey_lxc() {
 #helpDescription="Créer une nouvelle appliance Proxmox VE TurnKey LXC préconfigurée. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/turnkey/turnkey.sh)\". Les paramètres des ressources et du réseau sont ajustables après la création."
-#categoryMenu="LXC"
+#categoryMenu="cle_en_main"
 #nameMenu="TurnKey LXC"
 #commutatorLetter=""
 #commutatorWord="turnkey_lxc"
@@ -993,7 +992,7 @@ turnkey_lxc() {
 
 apt_cacher_ng_lxc() {
     #helpDescription="Créer un nouveau Proxmox VE Apt-Cacher-NG LXC. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/apt-cacher-ng.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="Apt-Cacher-NG LXC"
     #commutatorLetter=""
     #commutatorWord="apt_cacher_ng_lxc"
@@ -1002,7 +1001,7 @@ apt_cacher_ng_lxc() {
 
 bunkerweb_lxc() {
     #helpDescription="Créer un nouveau BunkerWeb LXC Proxmox VE. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/bunkerweb.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="BunkerWeb LXC"
     #commutatorLetter=""
     #commutatorWord="bunkerweb_lxc"
@@ -1011,7 +1010,7 @@ bunkerweb_lxc() {
 
 caddy_lxc() {
     #helpDescription="Créer un nouveau Caddy LXC Proxmox VE. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/caddy.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="Caddy LXC"
     #commutatorLetter=""
     #commutatorWord="caddy_lxc"
@@ -1020,7 +1019,7 @@ caddy_lxc() {
 
 cloudflared_lxc() {
     #helpDescription="Créer un nouveau Cloudflared LXC Proxmox VE. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/cloudflared.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="Cloudflared LXC"
     #commutatorLetter=""
     #commutatorWord="cloudflared_lxc"
@@ -1029,7 +1028,7 @@ cloudflared_lxc() {
 
 cronicle_lxc() {
     #helpDescription="Créer un nouveau LXC principal Proxmox VE Cronicle. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/cronicle.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="Cronicle LXC"
     #commutatorLetter=""
     #commutatorWord="cronicle_lxc"
@@ -1038,7 +1037,7 @@ cronicle_lxc() {
 
 cronicle_lxc() {
     #helpDescription="Créer un nouveau LXC principal Proxmox VE Cronicle. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/cronicle.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="Cronicle LXC"
     #commutatorLetter=""
     #commutatorWord="cronicle_lxc"
@@ -1047,7 +1046,7 @@ cronicle_lxc() {
 
 flaresolverr_lxc() {
     #helpDescription="Créer un nouveau FlareSolverr LXC Proxmox VE. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/flaresolverr.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="FlareSolverr LXC"
     #commutatorLetter=""
     #commutatorWord="flaresolverr_lxc"
@@ -1057,7 +1056,7 @@ flaresolverr_lxc() {
 
 headscale_lxc() {
     #helpDescription="Créer un nouveau Headscale LXC Proxmox VE. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/headscale.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="Headscale LXC"
     #commutatorLetter=""
     #commutatorWord="headscale_lxc"
@@ -1067,7 +1066,7 @@ headscale_lxc() {
 
 iventoy_lxc() {
     #helpDescription="Créer un nouveau Proxmox VE iVentoy LXC. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/iventoy.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="iVentoy LXC"
     #commutatorLetter=""
     #commutatorWord="iventoy_lxc"
@@ -1077,7 +1076,7 @@ iventoy_lxc() {
 
 keycloak_lxc() {
     #helpDescription="Créer un nouveau Proxmox VE Keycloak LXC. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/keycloak.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="Keycloak LXC"
     #commutatorLetter=""
     #commutatorWord="keycloak_lxc"
@@ -1087,7 +1086,7 @@ keycloak_lxc() {
 
 meshcentral_lxc() {
     #helpDescription="Créer un nouveau Proxmox VE MeshCentral LXC. Pour créer, exécutez : bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/meshcentral.sh)\"."
-    #categoryMenu="LXC"
+    #categoryMenu="serveur_reseau"
     #nameMenu="MeshCentral LXC"
     #commutatorLetter=""
     #commutatorWord="meshcentral_lxc"
@@ -1106,7 +1105,7 @@ machine_virtuelle_chr_routeros_de_mikrotik() {
 
 installation_de_netbird() {
 #helpDescription="NetBird combine un réseau privé peer-to-peer sans configuration et un système de contrôle d'accès centralisé dans une seule plate-forme, ce qui facilite la création de réseaux privés sécurisés pour votre organisation ou votre domicile. Pour installer NetBird sur un LXC existant, exécutez la commande ci-dessous dans le shell Proxmox VE. Une fois le script terminé, redémarrez le LXC puis exécutez le netbird updans la console LXC."
-#categoryMenu="outils_proxmox_ve"
+#categoryMenu="serveur_reseau"
 #nameMenu="NetBird"
 #commutatorLetter=""
 #commutatorWord="installation_de_netbird"
@@ -1133,7 +1132,7 @@ omada_lxc() {
 
 openwrt_vm() {
 #helpDescription="OpenWrt est un puissant firmware open source qui peut transformer une large gamme de périphériques réseau en routeurs hautement personnalisables et riches en fonctionnalités, offrant aux utilisateurs un meilleur contrôle et une meilleure flexibilité sur leur infrastructure réseau. Pour créer une nouvelle machine virtuelle Proxmox VE OpenWrt, exécutez la commande ci-dessous dans le shell Proxmox VE. ⚡ Paramètres par défaut : 256 Mo de RAM - 512 Mo de stockage - 1 CPU ⚡"
-#categoryMenu="systeme_operateur"
+#categoryMenu="serveur_reseau"
 #nameMenu="Machine virtuelle OpenWrt"
 #commutatorLetter=""
 #commutatorWord="openwrt_vm"
@@ -1718,7 +1717,7 @@ mafl_lxc() {
 
 boite_a_olives() {
 #helpDescription="OliveTin fournit un moyen sécurisé et simple d'exécuter des commandes shell prédéterminées via une interface Web. Pour installer OliveTin, ⚠️ exécutez la commande ci-dessous dans la console LXC. bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/olivetin.sh)\" Interface OliveTin : IP:1337 ⚙️ Chemin de configuration Copie /etc/OliveTin/config.yaml"
-#categoryMenu="divers"
+#categoryMenu="tableaux_de_bord"
 #nameMenu="OliveTin (Boîte à olives)"
 #commutatorLetter=""
 #commutatorWord="boite_a_olives"
@@ -1790,7 +1789,7 @@ gokapi_lxc() {
 
 jackett_lxc() {
 #helpDescription="Jackett prend en charge une large gamme de trackers, y compris les plus populaires comme The Pirate Bay, RARBG et Torrentz2, ainsi que de nombreux trackers privés. Il peut être intégré à plusieurs clients BitTorrent, notamment qBittorrent, Deluge et uTorrent, entre autres. Pour créer un nouveau Proxmox VE Jackett LXC, exécutez la commande ci-dessous dans le shell Proxmox VE . bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/jackett.sh)\" ⚡ Paramètres par défaut : 512 Mo de RAM - 2 Go de stockage - 1 vCPU ⚡ Interface Jackett : IP:9117"
-#categoryMenu="code"
+#categoryMenu="fichier_code"
 #nameMenu="Jackett LXC"
 #commutatorLetter=""
 #commutatorWord="jackett_lxc"
@@ -1799,7 +1798,7 @@ jackett_lxc() {
 
 kubo_lxc() {
 #helpDescription="Kubo a été la première implémentation d'IPFS et est aujourd'hui la plus utilisée. Il implémente le système de fichiers interplanétaire - la norme Web3 pour l'adressage de contenu, interopérable avec HTTP. Il est donc alimenté par les modèles de données d'IPLD et la libp2p pour la communication réseau. Kubo est écrit en Go. Pour créer un nouveau Proxmox VE Kubo LXC, exécutez la commande ci-dessous dans le shell Proxmox VE . bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/kubo.sh)\" ⚡ Paramètres par défaut : 4 Go de RAM - 4 Go de stockage - 2 vCPU ⚡ Interface Kubo : IP:5001/webui"
-#categoryMenu="code"
+#categoryMenu="fichier_code"
 #nameMenu="Kubo LXC"
 #commutatorLetter=""
 #commutatorWord="kubo_lxc"
@@ -1808,7 +1807,7 @@ kubo_lxc() {
 
 pairdrop_lxc() {
 #helpDescription="PairDrop : Partage de fichiers local dans votre navigateur. Pour créer un nouveau PairDrop LXC Proxmox VE, exécutez la commande ci-dessous dans le shell Proxmox VE . bash -c \"$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/ct/pairdrop.sh)\" ⚡ Paramètres par défaut : 512 Mo de RAM - 4 Go de stockage - 1 vCPU ⚡ Interface PairDrop : IP : 3000"
-#categoryMenu="code"
+#categoryMenu="fichier_code"
 #nameMenu="PairDrop LXC"
 #commutatorLetter=""
 #commutatorWord="pairdrop_lxc"
@@ -1889,7 +1888,7 @@ serveur_vs_code() {
 
 administration_du_systeme_webmin() {
 #helpDescription="Webmin fournit une interface utilisateur graphique (GUI) pour des tâches telles que la gestion des comptes utilisateurs, la gestion des packages, la configuration du système de fichiers, la configuration du réseau, etc. Pour installer l’administration système Webmin, exécutez la commande ci-dessous dans la console LXC. Interface Webmin : (https)IP:10000. Connexion initiale nom d'utilisateur root mot de passe root. Pour mettre à jour Webmin, utilisez l'option 'Update from the Webmin UI'. Pour désinstaller Webmin, exécutez 'bash /etc/webmin/uninstall.sh'."
-#categoryMenu="systeme_operateur"
+#categoryMenu="fichier_code"
 #nameMenu="Administration du système Webmin"
 #commutatorLetter=""
 #commutatorWord="administration_du_systeme_webmin"
