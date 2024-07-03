@@ -2,7 +2,8 @@
 > Pour éditer le fichier readme en markdown https://readme.easyformer.fr/
 
 
-## Sources des scripts lancés provenant du MIT et vérifiables ICI
+**Les sources des scripts officiels lancés proviennent du MIT et sont vérifiables ici**
+
 https://tteck.github.io/Proxmox/
 
 # easyproxmoxtools
