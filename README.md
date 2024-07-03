@@ -6,7 +6,7 @@
 
 https://tteck.github.io/Proxmox/
 
-# easyproxmoxtools
+# Easy ProxMox Tools
 Easy proxmox tools est un lanceur d'installations de VM et de containers LXC dédié à la gestion de ProxMox VE.
 
 Script de personnalisation et d'administration de linux en bash.
