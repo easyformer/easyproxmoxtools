@@ -20,7 +20,9 @@ Le script Easytools génère automatiquement :
 
 ## Capture de l'interface
 
-![easyproxmoxtools_capture](/easyproxmoxtools_capture.png "easyproxmoxtools_capture").
+Les captures des outils sont en bas de la page.
+
+![easyproxmoxtools_capture_main_menu_3col](/easyproxmoxtools_capture_main_menu_3col.png "easyproxmoxtools_capture_main_menu_3col").
 
 ## Pour l'utiliser sur votre Débian ou Ubuntu tappez simplement:
     
@@ -28,7 +30,13 @@ Le script Easytools génère automatiquement :
     wget https://raw.githubusercontent.com/easyformer/easyproxmoxtools/main/easyproxmoxtools.sh
     chmod +x easyproxmoxtools.sh
     ./easyproxmoxtools.sh
-    
+
+
+## Prenez le temps de bien lire l'aide
+> Les outils que vous installez sont accompagnés de détails sur la post-configuration et des ports d'écoute dans l'aide.
+
+![easyproxmoxtools_capture_help](/easyproxmoxtools_capture_help.png "easyproxmoxtools_capture_help").
+
 
 ## Voici un exemple de fonction à intégrer dans le code pour ce faire:
 > Les commentaires sont obligatoires...
@@ -70,6 +78,8 @@ Le script Easytools génère automatiquement :
         "Tableaux de bord" "tableaux_de_bord"
         "Fichier - Code" "fichier_code"
         "Divers" "divers"
+        "[Manuel d'utilisation]" "help"
+        "[Quitter]" "quit"
     )
 
 ## Vous pouvez simplement ajouter des fonctions avec votre IA préférée en tappant:
@@ -89,5 +99,76 @@ Le script Easytools génère automatiquement :
 
 
 
+## Voici les captures des outils par catégorie:
 
+        **Outils Proxmox VE**
+		
+![easyproxmoxtools_capture_outils_proxmox_ve](/easyproxmoxtools_capture_outils_proxmox_ve.png "easyproxmoxtools_capture_outils_proxmox_ve").
 
+        **Assistant à domicile**
+		
+![easyproxmoxtools_capture_assistant_a_domicile](/easyproxmoxtools_capture_assistant_a_domicile.png "easyproxmoxtools_capture_assistant_a_domicile").
+
+        **Automatisation**
+		
+![easyproxmoxtools_capture_automatisation](/easyproxmoxtools_capture_automatisation.png "easyproxmoxtools_capture_automatisation").
+
+        **MQTT**
+		
+![easyproxmoxtools_capture_mqtt](/easyproxmoxtools_capture_mqtt.png "easyproxmoxtools_capture_mqtt").
+
+        **Base de données**
+		
+![easyproxmoxtools_capture_base_de_donnees](/easyproxmoxtools_capture_base_de_donnees.png "easyproxmoxtools_capture_base_de_donnees").
+
+        **Zigbee - Zwave - Matter**
+		
+![easyproxmoxtools_capture_zigbee_zwave_matter](/easyproxmoxtools_capture_zigbee_zwave_matter.png "easyproxmoxtools_capture_zigbee_zwave_matter").
+
+        **Suivi - Analyse**
+		
+![easyproxmoxtools_capture_suivi_analyse](/easyproxmoxtools_capture_suivi_analyse.png "easyproxmoxtools_capture_suivi_analyse").
+
+        **Docker-Kubernetes**
+		
+![easyproxmoxtools_capture_docker_kubernetes](/easyproxmoxtools_capture_docker_kubernetes.png "easyproxmoxtools_capture_docker_kubernetes").
+
+        **Système opérateur**
+		
+![easyproxmoxtools_capture_systeme_operateur](/easyproxmoxtools_capture_systeme_operateur.png "easyproxmoxtools_capture_systeme_operateur").
+
+        **Clé en main**
+		
+![easyproxmoxtools_capture_cle_en_main](/easyproxmoxtools_capture_cle_en_main.png "easyproxmoxtools_capture_cle_en_main").
+
+        **Serveur - Réseau**
+		
+![easyproxmoxtools_capture_serveur_reseau](/easyproxmoxtools_capture_serveur_reseau.png "easyproxmoxtools_capture_serveur_reseau").
+
+        **Médias - Photo**
+		
+![easyproxmoxtools_capture_medias_photo](/easyproxmoxtools_capture_medias_photo.png "easyproxmoxtools_capture_medias_photo").
+
+        **Enregistreur vidéo numérique (NVR)**
+		
+![easyproxmoxtools_capture_document_notes](/easyproxmoxtools_capture_document_notes.png "easyproxmoxtools_capture_document_notes").
+
+        **Bloqueur de publicités - DNS**
+		
+![easyproxmoxtools_capture_bloqueur_de_publicites_dns](/easyproxmoxtools_capture_bloqueur_de_publicites_dns.png "easyproxmoxtools_capture_bloqueur_de_publicites_dns").
+
+        **Document - Notes**
+		
+![easyproxmoxtools_capture_document_notes](/easyproxmoxtools_capture_document_notes.png "easyproxmoxtools_capture_document_notes").
+
+        **Tableaux de bord**
+		
+![easyproxmoxtools_capture_tableaux_de_bord](/easyproxmoxtools_capture_tableaux_de_bord.png "easyproxmoxtools_capture_tableaux_de_bord").
+
+        **Fichier - Code**
+		
+![easyproxmoxtools_capture_fichier_code](/easyproxmoxtools_capture_fichier_code.png "easyproxmoxtools_capture_fichier_code").
+
+        **Divers**
+		
+![easyproxmoxtools_capture_divers](/easyproxmoxtools_capture_divers.png "easyproxmoxtools_capture_divers").
